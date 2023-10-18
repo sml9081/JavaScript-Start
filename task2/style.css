@@ -1,0 +1,9 @@
+body {
+    font-size: 30px;
+    }
+
+p {
+   text-align: left;
+   text-decoration: dashed;
+   color: rgb(74, 63, 177);
+}
