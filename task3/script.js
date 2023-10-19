@@ -10,19 +10,25 @@ function makeGreen() {
     trafficLightEl3.style.background = '';
     clickCounter += 1;
 }
+trafficLightEl.addEventListener('click', changeColor);
+
 function makeYellow() {
     trafficLightEl2.style.background = 'yellow';
     trafficLightEl.style.background = '';
     trafficLightEl3.style.background = '';
     clickCounter += 1;
 }
+trafficLightEl2.addEventListener('click', changeColor);
+
 function makeRed() {
     trafficLightEl3.style.background = 'red';
     trafficLightEl.style.background = '';
     trafficLightEl2.style.background = '';
     clickCounter = 0;
 }
-function takeRange() {
+trafficLightEl3.addEventListener('click', changeColor); 
+
+function changeColor() {
     switch (clickCounter) {
         case 0: makeGreen();
             break;
@@ -32,6 +38,4 @@ function takeRange() {
             break;
     }
 }
-trafficLightEl.addEventListener('click', takeRange);
-trafficLightEl2.addEventListener('click', takeRange);
-trafficLightEl3.addEventListener('click', takeRange); 
+
